@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jay's Personal Site</title>
+    <title>Jay's Portfolio</title>
     <link rel="shortcut icon" href="https://cdn.hackclubber.dev/slackcdn/7a87cf2f914524e4198d0e5ab9460cab.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <script>
-        setTimeout(() => {
-            window.location = "https://en.pronouns.page/@computingsquid";
-        }, 3000);
-    </script>
-    <h1>Hi There - It's Jay!</h1>
-    <p>Hello! This site is still in the making. Check back later for something cool :3<br>
-        For now, I'll redirect you to my <a href="https://en.pronouns.page/@computingsquid">pronouns.page</a>
-    </p>
+    <div class="container">
+        <header>
+            <h1>Jay's Portfolio</h1>
+            <p class="tagline">High School Student | Developer | Biologist | Engineer | Science Olympiad</p>
+        </header>
+        <section class="profile">
+            <div class="profile-content">
+                <h2>About Me</h2>
+                <img id="profile-photo" src="assets/photos/square_photo.jpg" alt="Jay's Profile Photo">
+                <p>
+                    Hi! I'm Jacob (Jay) Bolling, a high school student passionate about technology, biology, and engineering.
+                    I love building things that can solve real-world problems, and I'm always on the lookout for new and interesting projects. 
+                    I'm currently a student at West High School in Madison, Wisconsin, and when I'm not doing my homework, studying for Science Olympiad, or codiing, you'll probably find my playing one of the piano, trumpet, or french horn. 
+                    If by the very rare chance that I've done all my work, you'll probably find me playing video games or reading a book on my patio.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Student</span>
+                    <span class="tech-tag">Developer</span>
+                    <span class="tech-tag">Science Enthusiast</span>
+                    <span class="tech-tag">Musician</span>
+                    <span class="tech-tag">Engineer</span>
+                    <span class="tech-tag">Handyman</span>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Projects</h2>
+                <p>Insert projects here</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JavaScript/Typescript</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Rust (soon)</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Science Olympiad</h2>
+                <p>Insert Science Olympiad projects here</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Codebusters</span>
+                    <span class="tech-tag">Microbe Mission</span>
+                    <span class="tech-tag">Code Analysis</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Engineering & Hardware</h2>
+                <p>Insert Engineering projects here</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Raspberry Pi</span>
+                    <span class="tech-tag">Orpheus Pico</span>
+                    <span class="tech-tag">Robot Tour</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <a href="https://github.com/probablycomputingsquid">GitHub</a>
+            <a href="https://discord.com/app">Discord - computingsquid</a>
+            <a href="https://linkedin.com/in/yourusername">LinkedIn (soon)</a>
+            <a href="mailto:jwbolling001@gmail.com">Email</a>
+            <a href="tel:+16082096033">Cell</a>
+        </div>
+    </div>
 </body>
 </html>

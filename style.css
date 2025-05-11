@@ -1,0 +1,130 @@
+:root {
+    --primary: #2a2a2a;
+    --secondary: #4a4a4a;
+    --accent: #00ff9d;
+    --text: #ffffff;
+    --retro-bg: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: var(--retro-bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 2rem;
+}
+
+hr {
+    border: 1px solid var(--accent);
+    margin: 2rem 0px;
+    width: 50%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: var(--text);
+    opacity: 0.9;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: var(--secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-top: 2px solid var(--accent);
+}
+
+.contact a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.contact a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#profile-photo {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--accent);
+}
