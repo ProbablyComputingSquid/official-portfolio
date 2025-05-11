@@ -128,3 +128,51 @@ h1 {
     margin-bottom: 1.5rem;
     border: 3px solid var(--accent);
 }
+
+/* Link styling */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.card a {
+    color: var(--accent);
+}
+
+.card a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Style for external link icons */
+.fa-up-right-from-square {
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.resume-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--accent);
+    color: var(--primary);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.resume-link:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.resume-link i {
+    margin-right: 0.5rem;
+}

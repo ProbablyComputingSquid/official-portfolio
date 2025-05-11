@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jay's Projects</title>
+    <link rel="shortcut icon" href="https://cdn.hackclubber.dev/slackcdn/7a87cf2f914524e4198d0e5ab9460cab.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--primary);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .project-links a {
+            margin-left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .project-description {
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tech span {
+            background: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+
+        .project-category {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <header>
+            <h1>My Projects</h1>
+            <p class="tagline">A collection of my work in programming, science, and engineering</p>
+        </header>
+
+        <section>
+            <h2 class="project-category">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Stick Together</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/ProbablyComputingSquid/stick-together" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A multiplayer web game where players work together to solve puzzles by manipulating physics-based objects.
+                        Built with TypeScript and Matter.js for realistic physics simulation.
+                    </p>
+                    <div class="project-tech">
+                        <span>TypeScript</span>
+                        <span>Matter.js</span>
+                        <span>WebSockets</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">FOMASC Website</h3>
+                        <div class="project-links">
+                            <a href="https://friendsofmadisonareascience.org/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A modern website for the Friends of Madison Area Science Center, featuring event information,
+                        membership details, and a blog section. Built with a focus on accessibility and user experience.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>WordPress</span>
+                        <span>Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="project-category">Science Olympiad Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Codebusters Practice Tool</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A Python-based tool for practicing Codebusters events, featuring various cipher implementations
+                        and practice problems. Includes a user-friendly interface for testing different encryption methods.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Cryptography</span>
+                        <span>GUI</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Microbe Mission Database</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A comprehensive database of microorganisms and their characteristics, designed to help
+                        Science Olympiad teams prepare for the Microbe Mission event.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>SQLite</span>
+                        <span>Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="project-category">Personal Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Personal Website</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/ProbablyComputingSquid/personal-site" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A retro-modern personal portfolio website showcasing my projects and interests.
+                        Built with HTML, CSS, and a touch of JavaScript for interactivity.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Arduino Weather Station</h3>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A DIY weather station built with Arduino, featuring temperature, humidity, and
+                        pressure sensors. Data is logged and can be viewed through a web interface.
+                    </p>
+                    <div class="project-tech">
+                        <span>Arduino</span>
+                        <span>C++</span>
+                        <span>IoT</span>
+                        <span>Web Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

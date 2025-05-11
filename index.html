@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jay's Portfolio</title>
-    <link rel="shortcut icon" href="https://cdn.hackclubber.dev/slackcdn/7a87cf2f914524e4198d0e5ab9460cab.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jacob (Jay) Bolling - High School Developer, Biologist, and Engineer. Portfolio showcasing projects in programming, science, and engineering.">
+    <meta name="keywords" content="Jay Bolling, Jacob Bolling, high school developer, student programmer, biology, engineering, Science Olympiad, Madison West High School">
+    <meta name="author" content="Jacob Bolling">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jay.loves-being-a.dev">
+    <meta property="og:title" content="Jay Bolling - Developer & Science Enthusiast">
+    <meta property="og:description" content="High school student passionate about technology, biology, and engineering. Check out my projects, resume, and experience.">
+    <meta property="og:image" content="https://jay.loves-being-a.dev/assets/photos/square_photo.jpg">
+
+   
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/photos/square_photo.jpg" type="image/x-icon">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Jay's Portfolio</title>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Jay's Portfolio</h1>
             <p class="tagline">High School Student | Developer | Biologist | Engineer | Science Olympiad</p>
+            <a href="assets/resume.pdf" class="resume-link" target="_blank">
+                <i class="fas fa-file-alt"></i> View Resume
+            </a>
         </header>
         <section class="profile">
             <div class="profile-content">
                 <h2>About Me</h2>
                 <img id="profile-photo" src="assets/photos/square_photo.jpg" alt="Jay's Profile Photo">
                 <p>
-                    Hi! I'm Jacob (Jay) Bolling, a high school student passionate about technology, biology, and engineering.
+                    Hi! I'm Jacob (Jay) Bolling, a high school student attending Madison West High School. I'm passionate about technology, biology, and engineering.
                     I love building things that can solve real-world problems, and I'm always on the lookout for new and interesting projects. 
-                    I'm currently a student at West High School in Madison, Wisconsin, and when I'm not doing my homework, studying for Science Olympiad, or codiing, you'll probably find my playing one of the piano, trumpet, or french horn. 
-                    If by the very rare chance that I've done all my work, you'll probably find me playing video games or reading a book on my patio.
+                    When I'm not doing my homework, studying for Science Olympiad, or codiing, you'll probably find my playing one of the piano, trumpet, or French horn. 
+                    If by the very rare chance that I've done all my work, you'll probably find me out in nature, playing video games, or reading with my dog on my patio.
                 </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Student</span>
                     <span class="tech-tag">Developer</span>
-                    <span class="tech-tag">Science Enthusiast</span>
+                    <span class="tech-tag">Science Olympiad Competitor</span>
                     <span class="tech-tag">Musician</span>
                     <span class="tech-tag">Engineer</span>
                     <span class="tech-tag">Handyman</span>
@@ -38,25 +60,46 @@
         <div class="grid">
             <div class="card">
                 <a href="/projects/projects.html"><h2>Projects</h2></a>
-                <p>Insert projects here</p>
+                <p>Here are some of my projects. Click on each project to see more details! You can find all my projects <a href="/projects/projects.html">here</a>.</p>
                 <div class="tech-stack">
-                  
+                    <div class="tech-tag">
+                        Stick Together <a href="https://github.com/ProbablyComputingSquid/stick-together" target="_blank">
+                       <i class="fas fa-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="tech-tag">
+                        FOMASC Website <a href="https://friendsofmadisonareascience.org/" target="_blank">
+                            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="tech-tag">
+                        Truth-or-Dare Discord Bot<a href="https://github.com/ProbablyComputingSquid/truth-or-dare-discord-bot" target="_blank">
+                            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="tech-tag">
+                        Red, White, and Beans <a href="https://github.com/ProbablyComputingSquid/game-jam-entry" target="_blank">
+                            <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
             <div class="card">
-                <h2>Science Olympiad</h2>
-                <p>Insert Science Olympiad events here</p>
+                <a href="/scio/scio.html"><h2>Science Olympiad</h2></a>
+                <p>Over the years, I've competed in many Science Olympiad events. Click on each event to see more details, including my awards!</p>
                 <div class="tech-stack">
                     <span class="tech-tag">Codebusters</span>
                     <span class="tech-tag">Microbe Mission</span>
-                    <span class="tech-tag">Code Analysis</span>
-                    <span class="tech-tag">Robot Tour</span>
+                    <span class="tech-tag">Code Analysis (WI-Only Event)</span>
+                    <span class="tech-tag">Robot Tour, Electric Vehicle (Past)</span>
+                    <span class="tech-tag">Machine Learning (Northwestern Trial Event)</span>
+                    <span class="tech-tag">Figure That (MIT, Northwestern Trial Event</span>
                 </div>
             </div>
 
             <div class="card">
-                <h2>Skills</h2>
+                <a href="/skills/skills.html"><h2>Skills</h2></a>
                 <p>Here are some of my skills that I've learned over the years. Click on each skill to see projects I've worked on tagged by that skill (still in progress!). </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Java</span>
@@ -75,7 +118,8 @@
         <div class="contact">
             <a href="https://github.com/probablycomputingsquid">GitHub</a>
             <a href="https://discord.com/app">Discord - computingsquid</a>
-            <a href="https://linkedin.com/in/yourusername">LinkedIn (soon)</a>
+            <a href="https://signal.org/download/">Signal - jay.461</a>
+            <!-- <a href="https://linkedin.com/in/username">LinkedIn (soon)</a> -->
             <a href="mailto:jwbolling001@gmail.com">Email</a>
             <a href="tel:+16082096033">Cell</a>
         </div>
