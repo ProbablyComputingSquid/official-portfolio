@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Radio Station - Jay's Portfolio & Blog</title>
+    <link rel="shortcut icon" href="/assets/photos/square_photo.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .article-content pre {
+            background: var(--primary);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .article-content code {
+            background: var(--primary);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .article-content h1, .article-content h2, .article-content h3 {
+            color: var(--accent);
+            margin-top: 2rem;
+        }
+
+        .article-content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .article-content a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+
+        .article-meta {
+            color: var(--text);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .article-tag {
+            background: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <div class="article-content">
+            <h1>Raspberry Pi Radio Station</h1>
+            <div class="article-meta">
+                2024-01-15
+                
+                <span style="margin: 0 0.5rem">•</span>
+                Category: raspberry pi
+                
+            </div>
+            <h1>Building a Raspberry Pi Radio Station</h1>
+<h2>Overview</h2>
+<p>This project involves creating a low-power radio station using a Raspberry Pi and a literal wire. The station broadcasts music and announcements within a small radius (~100 ft, but can be boosted with a better antenna), perfect for school events or local community use. Technically you aren&#39;t supposed to use this program for radio station broadcasting unless you have an amateur ham radio liscence, so make sure to get liscensed if you aren&#39;t already.</p>
+<h2>Hardware Requirements</h2>
+<ul>
+<li>Raspberry Pi (any model)</li>
+<li>Antenna (simple wire works)</li>
+<li>Power supply</li>
+<li>Audio source (works with USB sound card, locally stored files or GPIO)</li>
+</ul>
+<h2>Software Setup</h2>
+<p>The station runs using a library (pifmrds) and can be enhanced by running scripts to autogenerate a playlist based on music tracks and voice clips for announcements, or even advertisement. This project is still in the making</p>
+<p><a href="https://github.com/ChristopheJacquet/PiFmRds">https://github.com/ChristopheJacquet/PiFmRds</a></p>
+
+            
+            <div class="article-tags">
+                
+                <span class="article-tag">raspberry pi</span><span class="article-tag">ham radio</span><span class="article-tag">hardware</span><span class="article-tag">python</span>
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

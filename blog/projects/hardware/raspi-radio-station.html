@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raspberry Pi Radio Station - Jay's Projects</title>
+    <title>Raspberry Pi Radio Station - Jay's Portfolio & Blog</title>
     <link rel="shortcut icon" href="/assets/photos/square_photo.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -63,6 +63,20 @@
             margin-bottom: 2rem;
             font-style: italic;
         }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .article-tag {
+            background: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -71,62 +85,36 @@
             <i class="fas fa-arrow-left"></i> Back to Home
         </a>
         <div class="article-content">
-            <h1>{{title}}</h1>
+            <h1>Raspberry Pi Radio Station</h1>
             <div class="article-meta">
                 2024-01-15
+                
+                <span style="margin: 0 0.5rem">•</span>
+                Category: raspberry pi
+                
+                
+                <div class="article-tags">
+                    
+                    <span class="article-tag">raspberry pi</span><span class="article-tag">ham radio</span><span class="article-tag">hardware</span><span class="article-tag">python</span>
+                       
+                </div>
+                
             </div>
             <h1>Building a Raspberry Pi Radio Station</h1>
 <h2>Overview</h2>
-<p>This project involves creating a low-power radio station using a Raspberry Pi and a simple FM transmitter. The station broadcasts music and announcements within a small radius, perfect for school events or local community use.</p>
+<p>This project involves creating a low-power radio station using a Raspberry Pi and a literal wire. The station broadcasts music and announcements within a small radius (~100 ft, but can be boosted with a better antenna), perfect for school events or local community use. Technically you aren&#39;t supposed to use this program for radio station broadcasting unless you have an amateur ham radio liscence, so make sure to get liscensed if you aren&#39;t already.</p>
 <h2>Hardware Requirements</h2>
 <ul>
 <li>Raspberry Pi (any model)</li>
-<li>FM transmitter module</li>
 <li>Antenna (simple wire works)</li>
 <li>Power supply</li>
-<li>Audio source (USB sound card or GPIO)</li>
+<li>Audio source (works with USB sound card, locally stored files or GPIO)</li>
 </ul>
 <h2>Software Setup</h2>
-<p>The station runs on a custom Python script that manages the audio playback and transmission:</p>
-<pre><code class="language-python">import RPi.GPIO as GPIO
-import time
-import subprocess
+<p>The station runs using a library (pifmrds) and can be enhanced by running scripts to autogenerate a playlist based on music tracks and voice clips for announcements, or even advertisement. This project is still in the making</p>
+<p><a href="https://github.com/ChristopheJacquet/PiFmRds">https://github.com/ChristopheJacquet/PiFmRds</a></p>
 
-# Initialize GPIO
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(18, GPIO.OUT)
-
-def play_audio(file_path):
-    subprocess.run([&#39;aplay&#39;, file_path])
-
-def main():
-    while True:
-        # Play music
-        play_audio(&#39;music.wav&#39;)
-        # Play announcement
-        play_audio(&#39;announcement.wav&#39;)
-        time.sleep(1)
-
-if __name__ == &quot;__main__&quot;:
-    main()
-</code></pre>
-<h2>Features</h2>
-<ul>
-<li>Automated playlist management</li>
-<li>Scheduled announcements</li>
-<li>Low power consumption</li>
-<li>Easy to set up and maintain</li>
-</ul>
-<h2>Future Improvements</h2>
-<ol>
-<li>Web interface for remote control</li>
-<li>Multiple channel support</li>
-<li>Live streaming capability</li>
-<li>Emergency broadcast system</li>
-</ol>
-<h2>Conclusion</h2>
-<p>This project demonstrates how simple hardware can be used to create interesting and useful applications. The radio station has been successfully used at several school events and community gatherings. </p>
-
+            
         </div>
     </div>
 </body>
