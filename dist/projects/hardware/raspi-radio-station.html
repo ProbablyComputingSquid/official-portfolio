@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Radio Station - Jay's Projects</title>
+    <link rel="shortcut icon" href="/assets/photos/square_photo.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .article-content pre {
+            background: var(--primary);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .article-content code {
+            background: var(--primary);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .article-content h1, .article-content h2, .article-content h3 {
+            color: var(--accent);
+            margin-top: 2rem;
+        }
+
+        .article-content a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .article-content a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+
+        .article-meta {
+            color: var(--text);
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <div class="article-content">
+            <h1>{{title}}</h1>
+            <div class="article-meta">
+                2024-01-15
+            </div>
+            <h1>Building a Raspberry Pi Radio Station</h1>
+<h2>Overview</h2>
+<p>This project involves creating a low-power radio station using a Raspberry Pi and a simple FM transmitter. The station broadcasts music and announcements within a small radius, perfect for school events or local community use.</p>
+<h2>Hardware Requirements</h2>
+<ul>
+<li>Raspberry Pi (any model)</li>
+<li>FM transmitter module</li>
+<li>Antenna (simple wire works)</li>
+<li>Power supply</li>
+<li>Audio source (USB sound card or GPIO)</li>
+</ul>
+<h2>Software Setup</h2>
+<p>The station runs on a custom Python script that manages the audio playback and transmission:</p>
+<pre><code class="language-python">import RPi.GPIO as GPIO
+import time
+import subprocess
+
+# Initialize GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18, GPIO.OUT)
+
+def play_audio(file_path):
+    subprocess.run([&#39;aplay&#39;, file_path])
+
+def main():
+    while True:
+        # Play music
+        play_audio(&#39;music.wav&#39;)
+        # Play announcement
+        play_audio(&#39;announcement.wav&#39;)
+        time.sleep(1)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<h2>Features</h2>
+<ul>
+<li>Automated playlist management</li>
+<li>Scheduled announcements</li>
+<li>Low power consumption</li>
+<li>Easy to set up and maintain</li>
+</ul>
+<h2>Future Improvements</h2>
+<ol>
+<li>Web interface for remote control</li>
+<li>Multiple channel support</li>
+<li>Live streaming capability</li>
+<li>Emergency broadcast system</li>
+</ol>
+<h2>Conclusion</h2>
+<p>This project demonstrates how simple hardware can be used to create interesting and useful applications. The radio station has been successfully used at several school events and community gatherings. </p>
+
+        </div>
+    </div>
+</body>
+</html>

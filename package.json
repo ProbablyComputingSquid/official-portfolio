@@ -1,0 +1,17 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "Jay's personal website",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "nodemon --watch content --ext md --exec 'npm run build'"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "marked": "^12.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+} 

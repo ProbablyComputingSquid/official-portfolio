@@ -4,6 +4,7 @@
     --accent: #00ff9d;
     --text: #ffffff;
     --retro-bg: #1a1a1a;
+    --warning: #ff9d00;
 }
 
 * {
@@ -175,4 +176,27 @@ a:hover {
 
 .resume-link i {
     margin-right: 0.5rem;
+}
+
+.warning-banner {
+    background: var(--warning);
+    color: var(--primary);
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.warning-banner i {
+    margin-right: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
