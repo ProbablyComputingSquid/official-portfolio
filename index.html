@@ -26,8 +26,13 @@
 </head>
 <body>
     <div class="warning-banner">
-        <i class="fas fa-exclamation-triangle"></i>
-        Site still under construction, not all elements work as intended
+        <div class="warning-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            Site still under construction, not all elements work as intended
+        </div>
+        <button class="close-button" onclick="this.parentElement.style.display='none'">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
     <div class="container">
         <header>
