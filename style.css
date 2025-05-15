@@ -2,6 +2,7 @@
     --primary: #2a2a2a;
     --secondary: #4a4a4a;
     --accent: #00ff9d;
+    --accent-muted: #4dcc8c;
     --text: #ffffff;
     --retro-bg: #1a1a1a;
     --warning: #ff9d00;
@@ -161,7 +162,7 @@ a:hover {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1.5rem;
-    background: var(--accent);
+    background: var(--accent-muted);
     color: var(--primary);
     border-radius: 4px;
     font-weight: bold;
