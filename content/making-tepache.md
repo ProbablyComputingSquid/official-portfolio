@@ -1,7 +1,7 @@
 ---
 title: Making Tepache at Home
 date: 2025-05-15
-folder: blog
+folder: posts
 category: cooking
 tags: fermentation, cooking, tepache, mexican, at-home, pineapple, drinks, beverages
 ---

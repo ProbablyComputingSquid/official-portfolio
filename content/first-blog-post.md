@@ -1,7 +1,7 @@
 ---
 title: Just started work on this website
 date: 2025-05-11
-folder: blog
+folder: posts
 category: development
 tags: web dev, development, ai, vibe coding, this website
 ---
