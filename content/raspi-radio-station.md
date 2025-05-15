@@ -1,6 +1,6 @@
 ---
 title: Raspberry Pi Radio Station
-date: 2024-01-15
+date: 2024-01-13
 folder: projects/hardware
 category: raspberry pi
 tags: raspberry pi, ham radio, hardware, python
