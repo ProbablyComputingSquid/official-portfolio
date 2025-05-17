@@ -17,81 +17,35 @@ const projectTemplate = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{excerpt}}">
+    <meta name="keywords" content="{{tags}}">
+    <meta name="author" content="Jacob Bolling">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{title}} - Jay's Portfolio & Blog">
+    <meta property="og:url" content="https://jay.loves-being-a.dev{{url}}">
+    <meta property="og:description" content="{{excerpt}}">
+    <meta property="og:image" content="https://jay.loves-being-a.dev/assets/photos/square_photo.jpg">
+    <meta property="article:published_time" content="{{date}}">
+    {{#if tags}}
+    {{#each tags}}
+    <meta property="article:tag" content="{{this}}">
+    {{/each}}
+    {{/if}}
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{title}} - Jay's Portfolio & Blog">
+    <meta name="twitter:description" content="{{excerpt}}">
+    <meta name="twitter:image" content="https://jay.loves-being-a.dev/assets/photos/square_photo.jpg">
+    <meta name="twitter:creator" content="@computingsquid">
+    
     <title>{{title}} - Jay's Portfolio & Blog</title>
     <link rel="shortcut icon" href="/assets/photos/square_photo.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/blog/posts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        .article-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .article-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 1rem 0;
-        }
-
-        .article-content pre {
-            background: var(--primary);
-            padding: 1rem;
-            border-radius: 8px;
-            overflow-x: auto;
-        }
-
-        .article-content code {
-            background: var(--primary);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-        }
-
-        .article-content h1, .article-content h2, .article-content h3 {
-            color: var(--accent);
-            margin-top: 2rem;
-        }
-
-        .article-content a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .article-content a:hover {
-            text-decoration: underline;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin: 1rem 0;
-        }
-
-        .back-link i {
-            margin-right: 0.5rem;
-        }
-
-        .article-meta {
-            color: var(--text);
-            opacity: 0.8;
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .article-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .article-tag {
-            background: var(--secondary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -130,109 +84,8 @@ const blogIndexTemplate = `<!DOCTYPE html>
     <title>Blog - Jay's Portfolio & Blog</title>
     <link rel="shortcut icon" href="/assets/photos/square_photo.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/blog/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .blog-card {
-            background: var(--primary);
-            border: 1px solid var(--accent);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-header {
-            margin-bottom: 1rem;
-        }
-
-        .blog-title {
-            color: var(--accent);
-            font-size: 1.5rem;
-            margin: 0;
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-meta {
-            color: var(--text);
-            opacity: 0.8;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .blog-excerpt {
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .blog-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: auto;
-        }
-
-        .blog-tag {
-            background: var(--secondary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        .read-more {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .read-more:hover {
-            text-decoration: underline;
-        }
-
-        .read-more i {
-            margin-left: 0.5rem;
-        }
-
-        .blog-categories {
-            display: flex;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .category-link {
-            color: var(--accent);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--accent);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .category-link:hover {
-            background: var(--accent);
-            color: var(--primary);
-        }
-
-        .category-link.active {
-            background: var(--accent);
-            color: var(--primary);
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -338,13 +191,16 @@ async function processMarkdownFile(filePath) {
             .replaceAll('{{date}}', metadata.date || new Date().toLocaleDateString())
             .replaceAll('{{category}}', metadata.category || '')
             .replaceAll('{{content}}', htmlContent)
+            .replaceAll('{{excerpt}}', getExcerpt(markdownContent))
+            .replaceAll('{{url}}', '/' + path.relative('.', outputPath).replace(/\\/g, '/'))
             .replaceAll('{{#if category}}', metadata.category ? '' : '<!--')
             .replaceAll('{{/if}}', metadata.category ? '' : '-->')
             .replaceAll('{{#if tags}}', metadata.tags ? '' : '<!--')
             .replaceAll('{{/if}}', metadata.tags ? '' : '-->')
             .replaceAll('{{#each tags}}', metadata.tags ? '' : '<!--')
             .replaceAll('{{/each}}', metadata.tags ? '' : '-->')
-            .replaceAll('{{this}}', metadata.tags ? metadata.tags.join('</span><span class="article-tag">') : '');
+            .replaceAll('{{this}}', metadata.tags ? metadata.tags.join('</span><span class="article-tag">') : '')
+            .replaceAll('{{tags}}', metadata.tags ? metadata.tags.join(', ') : '');
 
         // Determine output directory based on folder tag or file location
         let outputDir = 'blog';
