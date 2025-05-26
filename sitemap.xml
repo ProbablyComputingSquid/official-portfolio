@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://jay.loves-being-a.dev/</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/assets/resume.pdf</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/blog/</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/projects/projects.html</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/scio/scio.html</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/skills/skills.html</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/blog/posts/making-tepache.html</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/blog/posts/first-blog-post.html</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/blog/projects/hardware/raspi-radio-station.html</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jay.loves-being-a.dev/index.html</loc>
+  <lastmod>2025-05-24T15:15:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

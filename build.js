@@ -146,8 +146,11 @@ function estimateReadTime(content) {
 
 // Helper function to get excerpt
 function getExcerpt(content, maxLength = 150) {
-    // Remove markdown syntax
-    const plainText = content.replace(/[#*`_]/g, '');
+    // Remove markdown syntax including images
+    const plainText = content
+        .replace(/!\[.*?\]\(.*?\)/g, '') // Remove markdown images ![alt](url)
+        .replace(/\[.*?\]\(.*?\)/g, '')  // Remove markdown links [text](url)
+        .replace(/[#*`_]/g, '');         // Remove other markdown syntax
     return plainText.length > maxLength 
         ? plainText.substring(0, maxLength) + '...'
         : plainText;
