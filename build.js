@@ -188,6 +188,16 @@ async function processMarkdownFile(filePath) {
         // Convert markdown to HTML
         const htmlContent = marked(markdownContent);
 
+        // Determine output directory based on folder tag or file location
+        let outputDir = 'blog';
+        if (metadata.folder) {
+            outputDir = path.join('blog', metadata.folder);
+        }
+        await fs.ensureDir(outputDir);
+
+        // Define output path before using it
+        const outputPath = path.join(outputDir, path.basename(filePath, '.md') + '.html');
+
         // Generate the final HTML
         const finalHtml = projectTemplate
             .replaceAll('{{title}}', metadata.title || path.basename(filePath, '.md'))
@@ -205,15 +215,7 @@ async function processMarkdownFile(filePath) {
             .replaceAll('{{this}}', metadata.tags ? metadata.tags.join('</span><span class="article-tag">') : '')
             .replaceAll('{{tags}}', metadata.tags ? metadata.tags.join(', ') : '');
 
-        // Determine output directory based on folder tag or file location
-        let outputDir = 'blog';
-        if (metadata.folder) {
-            outputDir = path.join('blog', metadata.folder);
-        }
-        await fs.ensureDir(outputDir);
-
         // Write the HTML file
-        const outputPath = path.join(outputDir, path.basename(filePath, '.md') + '.html');
         await writeFile(outputPath, finalHtml);
         
         console.log(`Generated: ${outputPath}`);

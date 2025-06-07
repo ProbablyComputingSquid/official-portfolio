@@ -6,109 +6,8 @@
     <title>Blog - Jay's Portfolio & Blog</title>
     <link rel="shortcut icon" href="/assets/photos/square_photo.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/blog/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .blog-card {
-            background: var(--primary);
-            border: 1px solid var(--accent);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-header {
-            margin-bottom: 1rem;
-        }
-
-        .blog-title {
-            color: var(--accent);
-            font-size: 1.5rem;
-            margin: 0;
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-meta {
-            color: var(--text);
-            opacity: 0.8;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .blog-excerpt {
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .blog-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: auto;
-        }
-
-        .blog-tag {
-            background: var(--secondary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        .read-more {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .read-more:hover {
-            text-decoration: underline;
-        }
-
-        .read-more i {
-            margin-left: 0.5rem;
-        }
-
-        .blog-categories {
-            display: flex;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .category-link {
-            color: var(--accent);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--accent);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .category-link:hover {
-            background: var(--accent);
-            color: var(--primary);
-        }
-
-        .category-link.active {
-            background: var(--accent);
-            color: var(--primary);
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -126,10 +25,41 @@
             <a href="#" class="category-link" data-category="development">development</a>
 <a href="#" class="category-link" data-category="cooking">cooking</a>
 <a href="#" class="category-link" data-category="raspberry pi">raspberry pi</a>
+<a href="#" class="category-link" data-category="science olympiad">science olympiad</a>
         </div>
 
         <div class="blog-grid">
             
+            <div class="blog-card" data-category="science olympiad">
+                <div class="blog-header">
+                    <h2 class="blog-title">Science Olympiad Nationals Tournament 2025</h2>
+                    <div class="blog-meta">
+                        <i class="far fa-calendar"></i> 2025-05-25
+                        <span style="margin: 0 0.5rem">•</span>
+                        <i class="far fa-clock"></i> 7 min read
+                    </div>
+                </div>
+                <p class="blog-excerpt">
+
+Madison West High School placed seventh overall at the University of Nebraska-Lincoln 2025 National tournament, beating our in-state rivals of Marqu...</p>
+                <div class="blog-tags">
+                    <span class="blog-tag">nationals</span>
+<span class="blog-tag">nebraska</span>
+<span class="blog-tag">scio</span>
+<span class="blog-tag">science olympiad</span>
+<span class="blog-tag">scioly</span>
+<span class="blog-tag">competition</span>
+<span class="blog-tag">tournament</span>
+<span class="blog-tag">univeristy of nebraska-lincoln</span>
+<span class="blog-tag">codebusters</span>
+<span class="blog-tag">microbe mission</span>
+                </div>
+                <a href="/blog/scioly/scioly-nationals-2025.html" class="read-more">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        
+
             <div class="blog-card" data-category="cooking">
                 <div class="blog-header">
                     <h2 class="blog-title">Making Tepache at Home</h2>
@@ -140,9 +70,10 @@
                     </div>
                 </div>
                 <p class="blog-excerpt">
+
 photo credit food & wine / getty images
 
-You probably clicked here wondering, what on earth ...</p>
+You probably clicked here wondering, what on earth is tepache? Tepache is an old fermented drink originatin...</p>
                 <div class="blog-tags">
                     <span class="blog-tag">fermentation</span>
 <span class="blog-tag">cooking</span>
