@@ -26,19 +26,15 @@ const projectTemplate = `<!DOCTYPE html>
     <meta property="og:title" content="{{title}} - Jay's Portfolio & Blog">
     <meta property="og:url" content="https://jay.loves-being-a.dev{{url}}">
     <meta property="og:description" content="{{excerpt}}">
-    <meta property="og:image" content="https://jay.loves-being-a.dev/assets/photos/square_photo.jpg">
+    <!--<meta property="og:image" content="https://jay.loves-being-a.dev/assets/photos/square_photo.jpg">-->
     <meta property="article:published_time" content="{{date}}">
-    {{#if tags}}
-    {{#each tags}}
-    <meta property="article:tag" content="{{this}}">
-    {{/each}}
-    {{/if}}
+   
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{title}} - Jay's Portfolio & Blog">
     <meta name="twitter:description" content="{{excerpt}}">
-    <meta name="twitter:image" content="https://jay.loves-being-a.dev/assets/photos/square_photo.jpg">
+    <!--<meta name="twitter:image" content="https://jay.loves-being-a.dev/assets/photos/square_photo.jpg">-->
     <meta name="twitter:creator" content="@computingsquid">
     
     <title>{{title}} - Jay's Portfolio & Blog</title>
